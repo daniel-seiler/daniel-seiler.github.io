@@ -1,0 +1,50 @@
+@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@5.2/distr/fira_code.css);
+
+code {
+    font-family: 'Fira Code', monospace;
+}
+
+@supports (font-variation-settings: normal) {
+    code {
+        font-family: 'Fira Code VF', monospace;
+    }
+}
+
+:root {
+    --background: #0d1926;
+    --foreground: #b4e1fd;
+    --black: #363636;
+    --blue: #0883ff;
+    --cyan: #08ff83;
+    --green: #83ff08;
+    --purple: #8308ff;
+    --red: #ff0883;
+    --white: #b6b6b6;
+    --yellow: #ff8308;
+    --brightBlack: #424242;
+    --brightBlue: #1e8eff;
+    --brightCyan: #1eff8e;
+    --brightGreen: #8eff1e;
+    --brightPurple: #8e1eff;
+    --brightRed: #ff1e8e;
+    --brightWhite: #c2c2c2;
+    --brightYellow: #ff8e1e;
+}
+
+html {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: Fira Code, sans-serif;
+}
+
+.input_box {
+    border: none;
+    border-bottom: 2px solid var(--red);
+    background-color: transparent;
+    outline: 0;
+}
