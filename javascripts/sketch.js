@@ -14,8 +14,8 @@ function setup(){
     strokeWeight(2);//default is 1
 }
 
-var timeArr = arrColon;
-/*[
+/*var timeArr = arrColon;
+[
 [0, 0, 0, 0, 1, 1, 0, 0, 0],
 [0, 0, 0, 1, 1, 1, 0, 0, 0],
 [0, 0, 1, 1, 1, 1, 0, 0, 0],
@@ -26,38 +26,29 @@ var timeArr = arrColon;
 [0, 0, 0, 0, 1, 1, 0, 0, 0],
 ]*/
 
-var multFact = 5;
+var multFact = 3;//5
 var xyOffset = 2;
 
 var currentTime = "00:00";
 var nextTime = "00:00";
+var lines = [];
 
 function draw() {
-    const lines = [];
-
     let date = new Date();
     nextTime = date.getHours() + ":" + date.getMinutes();
-    console.log(nextTime);
     if (nextTime !== currentTime) {
         currentTime = nextTime;
-        console.log("new time set");
-    }
-
-    for (let i = 0; i < timeArr.length; i++) {
-        let line = [];
-        for (let j = 0; j < timeArr[i].length; j++) {
-            let point = {x: (j + xyOffset) * multFact, y: (i + xyOffset) * multFact, z: timeArr[i][j] * multFact};
-            line.push(point);
-        }
-        lines.push(line);
+        lines = [];
+        lines = writeCoords(currentTime);
+        console.log(currentTime);
     }
 
     //draw
     clear();
-    for(let i = 0; i < timeArr.length; i++){
+    for(let i = 0; i < lines.length; i++){
         noFill();
         beginShape();
-        for(let j = 0; j < timeArr[i].length; j++){
+        for(let j = 0; j < lines[i].length; j++){
             curveVertex(lines[i][j].x, lines[i][j].y - 0.9 * lines[i][j].z);
         }
         endShape();
