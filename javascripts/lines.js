@@ -20,8 +20,8 @@ function writeCoords(currentTime) {
 function createArr(currentTime) {
     let currentArr = arrSpaceChar;
     for (let i = 0; i < currentTime.length; i++) {
-        appendArr(currentArr, charToArr(currentTime.charAt(i)));
-        //appendArr(currentArr, arrSpaceChar);//TODO space seems to copy previous array
+        currentArr = appendArr(currentArr, charToArr(currentTime.charAt(i)));
+        currentArr = appendArr(currentArr, arrSpaceChar);
     }
     return currentArr;
 }
@@ -57,8 +57,9 @@ function charToArr(character) {
 }
 
 function appendArr(currentArr, newArr) {
-    console.log(newArr);
+    let returnArr = new Array(57);
     for (let i = 0; i < currentArr.length; i++) {
-        currentArr[i].push(...newArr[i]);
+        returnArr[i] = currentArr[i].concat(newArr[i]);
     }
+    return returnArr;
 }
