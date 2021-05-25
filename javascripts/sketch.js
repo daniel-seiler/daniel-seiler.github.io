@@ -4,7 +4,7 @@ function setup(){
     let cnv = createCanvas(windowWidth, MAX_HEIGHT);
     cnv.parent('clock-holder');
     stroke(8, 255, 131);
-    frameRate(2);
+    frameRate(90);
     strokeWeight(2);
 }
 
@@ -14,7 +14,10 @@ var lines = [];
 
 function draw() {
     let date = new Date();
-    nextTime = date.getHours() + ":" + date.getMinutes();
+    let hours = (date.getHours() < 10) ? "0" + date.getHours() : date.getHours();
+    let minutes = (date.getMinutes() < 10) ? "0" + date.getMinutes() : date.getMinutes();
+    let seconds = (date.getSeconds() < 10) ? "0" + date.getSeconds() : date.getSeconds();
+    nextTime = hours + ":" + minutes + ":" + seconds;
     if (nextTime !== currentTime) {
         currentTime = nextTime;
         lines = [];
