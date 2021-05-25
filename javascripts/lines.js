@@ -1,3 +1,6 @@
+const MULT_FACT = 3;
+const OFFSET = 2;
+
 function writeCoords(currentTime) {
     let currentArr = createArr(currentTime);
     let lines = [];
@@ -5,7 +8,7 @@ function writeCoords(currentTime) {
     for (let i = 0; i < currentArr.length; i++) {
         let line = [];
         for (let j = 0; j < currentArr[i].length; j++) {
-            let point = {x: (j + xyOffset) * multFact, y: (i + xyOffset) * multFact, z: currentArr[i][j] * multFact};
+            let point = {x: (j + OFFSET) * MULT_FACT, y: (i + OFFSET) * MULT_FACT, z: currentArr[i][j] * MULT_FACT};
             line.push(point);
         }
         lines.push(line);
