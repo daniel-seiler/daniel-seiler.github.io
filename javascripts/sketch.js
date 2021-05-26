@@ -8,9 +8,9 @@ function setup(){
     strokeWeight(2);
 }
 
-var currentTime = "00:00";
-var nextTime = "00:00";
-var lines = [];
+let currentTime = "00:00";
+let nextTime = "00:00";
+let lines = [];
 
 function draw() {
     let date = new Date();
@@ -22,7 +22,6 @@ function draw() {
         currentTime = nextTime;
         lines = [];
         lines = writeCoords(currentTime);
-        console.log(currentTime);
     }
 
     //draw
