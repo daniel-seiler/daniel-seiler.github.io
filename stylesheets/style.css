@@ -32,11 +32,6 @@ code {
 }
 
 html {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
     background-color: var(--background);
     color: var(--foreground);
     font-family: Fira Code, sans-serif;
@@ -48,8 +43,22 @@ header {
     margin-top: 100px;
 }
 
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+#clock-holder {
+    margin: 100px;
+}
+
 .search {
-    display: block;
+    margin-bottom: 10px;
+}
+
+label {
+    border-bottom: 2px solid var(--red);
 }
 
 .input_box {
@@ -57,7 +66,6 @@ header {
     border-bottom: 2px solid var(--red);
     min-width: 750px;
     max-width: 900px;
-    width: 75%;
     background-color: transparent;
     outline: 0;
 }
