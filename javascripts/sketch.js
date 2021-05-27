@@ -1,10 +1,11 @@
-const MAX_HEIGHT = 300;
+const MAX_HEIGHT = 180;
+const MAX_WIDTH = 1106;
 
 function setup(){
-    let cnv = createCanvas(windowWidth, MAX_HEIGHT);
+    let cnv = createCanvas(MAX_WIDTH, MAX_HEIGHT);
     cnv.parent('clock-holder');
     stroke(8, 255, 131);
-    frameRate(90);
+    frameRate(60);
     strokeWeight(2);
 }
 
