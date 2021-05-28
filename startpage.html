@@ -8,20 +8,32 @@
     <script src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js"></script>
     <script src="javascripts/lines.js"></script>
     <script src="javascripts/sketch.js"></script>
+    <link rel="icon" href="images/icon_terminal.png"/>
 </head>
 <body>
 <main>
     <div id="clock-holder"></div>
 
-    <div class="search">
+    <div id="search">
         <form id="textField" class="search" action="https://google.com/search" method="get" autocomplete="off">
             <label>>_</label>
             <input class="input_box" type="text" name="q" autofocus="autofocus">
         </form>
     </div>
 
-    <div class="bookmark">
-        <a href="https://www.youtube.com">abc</a>
+    <div id="bookmark">
+        <a href="https://www.youtube.com">
+            <img class="bookmark_icon" src="images/icon_youtube.png">
+        </a>
+        <a href="https://www.reddit.com">
+            <img class="bookmark_icon" src="images/icon_reddit.png">
+        </a>
+        <a href="https://www.github.com">
+            <img class="bookmark_icon" src="images/icon_github.png">
+        </a>
+        <a href="https://stackoverflow.com">
+            <img class="bookmark_icon" src="images/icon_stackoverflow.png">
+        </a>
     </div>
 </main>
 </body>
