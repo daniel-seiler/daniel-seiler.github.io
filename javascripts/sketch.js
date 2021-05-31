@@ -1,5 +1,5 @@
 const MAX_HEIGHT = 180;
-const MAX_WIDTH = 1106;
+const MAX_WIDTH = 735;
 
 function setup(){
     let cnv = createCanvas(MAX_WIDTH, MAX_HEIGHT);
