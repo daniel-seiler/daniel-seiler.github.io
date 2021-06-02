@@ -57,10 +57,6 @@ main {
     margin-bottom: 20px;
 }
 
-label {
-    border-bottom: 2px solid var(--red);
-}
-
 .input_box {
     border: none;
     border-bottom: 2px solid var(--red);
