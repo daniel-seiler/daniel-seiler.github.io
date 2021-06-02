@@ -1,5 +1,6 @@
 const MAX_HEIGHT = 180;
 const MAX_WIDTH = 735;
+const Z_AXIS_OFFSET = 0.9;
 
 function setup(){
     let cnv = createCanvas(MAX_WIDTH, MAX_HEIGHT);
@@ -15,8 +16,8 @@ let lines = [];
 
 function draw() {
     let date = new Date();
-    let hours = (date.getHours() < 10) ? "0" + date.getHours() : date.getHours();
-    let minutes = (date.getMinutes() < 10) ? "0" + date.getMinutes() : date.getMinutes();
+    let hours = (date.getHours() < 10 ? "0" : "") + date.getHours();
+    let minutes = (date.getMinutes() < 10 ? "0" : "") + date.getMinutes();
     nextTime = hours + ":" + minutes;
     if (nextTime !== currentTime) {
         currentTime = nextTime;
@@ -30,7 +31,7 @@ function draw() {
         noFill();
         beginShape();
         for(let j = 0; j < lines[i].length; j++){
-            curveVertex(lines[i][j].x, lines[i][j].y - 0.9 * lines[i][j].z);
+            curveVertex(lines[i][j].x, lines[i][j].y - Z_AXIS_OFFSET * lines[i][j].z);
         }
         endShape();
     }
