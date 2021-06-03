@@ -65,7 +65,7 @@ main {
     background-color: transparent;
     color: var(--foreground);
     outline: 0;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 #bookmark {

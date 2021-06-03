@@ -6,7 +6,6 @@ function setup(){
     let cnv = createCanvas(MAX_WIDTH, MAX_HEIGHT);
     cnv.parent('clock-holder');
     stroke(8, 255, 131);
-    frameRate(1);
     strokeWeight(2);
 }
 
