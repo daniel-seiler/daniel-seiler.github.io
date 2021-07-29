@@ -79,3 +79,7 @@ main {
     width: 35px;
     height: 35px;
 }
+
+.bookmark_icon:hover {
+    transform: scale(1.4);
+}
