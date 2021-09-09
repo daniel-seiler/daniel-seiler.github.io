@@ -11,6 +11,8 @@ var drawClock = function(p) {
         //p.parent('clock-holder');
         p.stroke(8, 255, 131);
         p.strokeWeight(2);
+        p.frameRate(0.03);
+        p.draw();
     };
 
     p.draw = function() {
